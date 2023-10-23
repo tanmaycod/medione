@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="new" style="height: 30%;width: 100%; margin-top: 5%;">
+  <h2 style="margin-left: 40%;">Diabetes Predictor</h2>
+</section>
+
+
+<center><form method="post" style="margin-top: 2%;" >
+<div class="form-check">
+    Gender:
+  <input type="radio" name="gender" id="sex" value="1">Male
+  <input type="radio" name="gender" id="sex" value="0">Female
+
+</div>
+
+  <div class="form-group col-md-6" >
+    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Pregnancies" name="Pregnancies"  required >
+  </div>
+  <div class="form-group col-md-6">
+    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Glucose (range: 31-200)" name="Glucose"  required>
+  </div>
+  <div class="form-group col-md-6">
+    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="BloodPressure (range: 0-130)"  name="BloodPressure" required>
+  </div>
+  <div class="form-group col-md-6">
+    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="BMI (range: 0-70)"  name="BMI" step="0.1" required>
+  </div>
+  <div class="form-group col-md-6">
+    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="DiabetesPedigreeFunction (range: 0-2)" name="DiabetesPedigreeFunction"  required>
+  </div>
+
+  <button type="submit" class="btn btn-outline-primary" style="height: 40px;width: 20%;">Predict</button>
+</form>
+  </center>
+
+{% endblock %}
